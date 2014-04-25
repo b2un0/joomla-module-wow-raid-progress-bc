@@ -103,7 +103,7 @@ final class mod_wow_raid_progress_bc
     {
         $cache = JFactory::getCache('wow', 'output');
         $cache->setCaching(1);
-        $cache->setLifeTime($this->params->get('cache_time', 24) * 60 + rand(0, 60)); // randomize cache time a little bit for each url
+        $cache->setLifeTime($this->params->get('cache_time', 24) * 60 * 60 + rand(0, 60)); // randomize cache time a little bit for each url
 
         $key = md5($url);
 
